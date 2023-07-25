@@ -2,6 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: reviews
+  namespace: demo
 spec:
   host: reviews
   trafficPolicy:
@@ -22,6 +23,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: ratings
+  namespace: demo
 spec:
   host: ratings
   trafficPolicy:
@@ -45,6 +47,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: details
+  namespace: demo
 spec:
   host: details
   trafficPolicy:
