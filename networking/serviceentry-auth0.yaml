@@ -27,7 +27,7 @@ spec:
   tls:
   - match:
     - port: 443
-      sni_hosts:
+      sniHosts:
       - dev-2wq-dyxn.us.auth0.com
     route:
     - destination:
