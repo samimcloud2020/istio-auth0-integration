@@ -57,5 +57,7 @@ spec:
       simple: ROUND_ROBIN
   subsets:
     - labels:
-        version: v1       
+        version: v1
+      name: v1
+   
 ---
