@@ -9,7 +9,7 @@ spec:
     istio: ingressgateway
   servers:
   - port:
-      number: 8080
+      number: 80
       name: http
       protocol: HTTP
     hosts:
@@ -45,19 +45,6 @@ spec:
         port:
           number: 9080
 ---
-kind: DestinationRule
-apiVersion: networking.istio.io/v1alpha3
-metadata:
-  name: productpage-ds1
-  namespace: demo
-spec:
-  host: productpage
-  trafficPolicy:
-    loadBalancer:
-      simple: ROUND_ROBIN
-  subsets:
-    - labels:
-        version: v1
-      name: v1
+
    
 ---
